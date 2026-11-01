@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cipher Eats - Grill &amp; Nigerian Kitchen (Demo)</title>
+  <meta name="description" content="Cipher Eats is a fictional restaurant website built as a frontend portfolio demo: menu with filters, reservation enquiry form and responsive layout.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="demo-banner" role="note">
+    Portfolio demo: Cipher Eats is a fictional restaurant. Prices, reviews and contact details are samples.
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="Cipher Eats, back to top">Cipher<span>Eats</span></a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-small" href="#reserve">Reserve a table</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <img class="hero-img" src="images%20(2).jpeg" alt="" width="739" height="415">
+      <div class="container hero-content">
+        <p class="eyebrow">Grill &amp; Nigerian kitchen</p>
+        <h1>Smoky grills, bold jollof and a table waiting for you.</h1>
+        <p class="hero-text">Cipher Eats serves flame-grilled meats, Nigerian favourites and handmade burgers in a relaxed dining room made for long evenings with friends.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#menu">View menu</a>
+          <a class="btn btn-ghost" href="#reserve">Reserve a table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container about">
+        <div class="about-media">
+          <img src="images.jpeg" alt="Guests sharing drinks and food at a busy restaurant table" width="676" height="453" loading="lazy">
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">About us</p>
+          <h2>Food from the grill, served the way we eat at home</h2>
+          <p>Cipher Eats started with one idea: the dishes we cook for family on weekends deserve a proper dining room. Our kitchen centres on the charcoal grill, with suya-spiced chicken, peppered beef and fish cooked to order.</p>
+          <ul class="highlights">
+            <li>
+              <span class="highlight-icon" aria-hidden="true"><i class="fa-solid fa-fire"></i></span>
+              <div><h3>Cooked over charcoal</h3><p>Every grilled dish is cooked to order, never reheated.</p></div>
+            </li>
+            <li>
+              <span class="highlight-icon" aria-hidden="true"><i class="fa-solid fa-utensils"></i></span>
+              <div><h3>Small, honest menu</h3><p>Fewer dishes, made well, with fresh produce from local markets.</p></div>
+            </li>
+            <li>
+              <span class="highlight-icon" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+              <div><h3>Easy to book</h3><p>Send a reservation enquiry online and we'll confirm by email.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="section section-tint">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Our menu</p>
+          <h2>Something for every time of day</h2>
+          <p class="note">Sample prices for this demo.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter menu by category">
+          <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-filter="breakfast" aria-pressed="false">Breakfast</button>
+          <button type="button" class="filter" data-filter="lunch" aria-pressed="false">Lunch</button>
+          <button type="button" class="filter" data-filter="dinner" aria-pressed="false">Dinner</button>
+          <button type="button" class="filter" data-filter="drinks" aria-pressed="false">Drinks</button>
+        </div>
+
+        <ul class="menu-list" aria-live="polite">
+          <li class="menu-item" data-category="breakfast">
+            <div class="menu-item-head"><h3>Akara &amp; pap</h3><span class="price">₦3,500</span></div>
+            <p>Crispy bean fritters with warm custard and a side of pepper sauce.</p>
+            <span class="tag">Vegetarian</span>
+          </li>
+          <li class="menu-item" data-category="breakfast">
+            <div class="menu-item-head"><h3>Plantain &amp; egg sauce</h3><span class="price">₦4,000</span></div>
+            <p>Fried ripe plantain with scrambled eggs cooked in tomato and pepper.</p>
+            <span class="tag">Vegetarian</span>
+          </li>
+          <li class="menu-item" data-category="breakfast">
+            <div class="menu-item-head"><h3>Grill house breakfast</h3><span class="price">₦6,500</span></div>
+            <p>Grilled sausages, eggs, sauteed potatoes, beans and toast.</p>
+          </li>
+          <li class="menu-item" data-category="lunch">
+            <div class="menu-item-head"><h3>Party jollof &amp; chicken</h3><span class="price">₦7,500</span></div>
+            <p>Smoky jollof rice with grilled chicken, coleslaw and fried plantain.</p>
+            <span class="tag">Spicy</span>
+          </li>
+          <li class="menu-item" data-category="lunch">
+            <div class="menu-item-head"><h3>Classic beef burger</h3><span class="price">₦8,000</span></div>
+            <p>Grilled beef patty, cheese, lettuce, tomato and house sauce, with fries.</p>
+          </li>
+          <li class="menu-item" data-category="lunch">
+            <div class="menu-item-head"><h3>Grilled veggie wrap</h3><span class="price">₦5,500</span></div>
+            <p>Charred peppers, onions and halloumi in a toasted wrap.</p>
+            <span class="tag">Vegetarian</span>
+          </li>
+          <li class="menu-item" data-category="dinner">
+            <div class="menu-item-head"><h3>Suya-spiced half chicken</h3><span class="price">₦11,000</span></div>
+            <p>Charcoal-grilled chicken with yaji spice, roast potatoes and peppers.</p>
+            <span class="tag">Spicy</span><span class="tag">Gluten-free</span>
+          </li>
+          <li class="menu-item" data-category="dinner">
+            <div class="menu-item-head"><h3>Mixed grill platter (for two)</h3><span class="price">₦24,000</span></div>
+            <p>Chicken wings, beef skewers, croaker fish, plantain and dipping sauces.</p>
+          </li>
+          <li class="menu-item" data-category="dinner">
+            <div class="menu-item-head"><h3>Peppered croaker fish</h3><span class="price">₦14,500</span></div>
+            <p>Whole grilled croaker in pepper sauce, served with yam chips.</p>
+            <span class="tag">Gluten-free</span>
+          </li>
+          <li class="menu-item" data-category="drinks">
+            <div class="menu-item-head"><h3>Chilled zobo</h3><span class="price">₦1,500</span></div>
+            <p>Hibiscus drink with ginger, pineapple and cloves.</p>
+            <span class="tag">Alcohol-free</span>
+          </li>
+          <li class="menu-item" data-category="drinks">
+            <div class="menu-item-head"><h3>Chapman</h3><span class="price">₦2,500</span></div>
+            <p>The classic Nigerian fruit punch with citrus and cucumber.</p>
+            <span class="tag">Alcohol-free</span>
+          </li>
+          <li class="menu-item" data-category="drinks">
+            <div class="menu-item-head"><h3>Fresh fruit juice</h3><span class="price">₦2,000</span></div>
+            <p>Pineapple, orange or watermelon, pressed to order.</p>
+            <span class="tag">Alcohol-free</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Gallery</p>
+          <h2>From our kitchen</h2>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="image.webp" alt="Beef burger with fries and a glass of white wine" width="800" height="600" loading="lazy">
+            <figcaption>Classic beef burger</figcaption>
+          </figure>
+          <figure>
+            <img src="images%20(7).jpeg" alt="Roast chicken with potatoes and peppers on a white plate" width="554" height="554" loading="lazy">
+            <figcaption>Suya-spiced chicken</figcaption>
+          </figure>
+          <figure>
+            <img src="images%20(5).jpeg" alt="Wooden table with a mixed grill platter, wings and burgers" width="660" height="440" loading="lazy">
+            <figcaption>Mixed grill platter</figcaption>
+          </figure>
+          <figure>
+            <img src="images%20(6).jpeg" alt="Overhead view of many shared dishes on a bright orange table" width="678" height="452" loading="lazy">
+            <figcaption>Sharing plates</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="section section-tint">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Reviews</p>
+          <h2>What guests say</h2>
+          <p class="note">Sample testimonials for this demo.</p>
+        </div>
+        <div class="reviews">
+          <figure class="review">
+            <blockquote>"The suya chicken was smoky and juicy, and our food arrived quickly even on a busy Friday night."</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">TA</span><span><strong>Tolu A.</strong><small>Dinner with friends</small></span></figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>"Booking was easy and the staff had our table ready. The jollof tasted like a proper party jollof."</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">KM</span><span><strong>Kemi M.</strong><small>Birthday lunch</small></span></figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>"Great value for the grill platter. Enough for two, with leftovers to take home."</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">DE</span><span><strong>David E.</strong><small>Weekend dinner</small></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation -->
+    <section id="reserve" class="section">
+      <div class="container reserve">
+        <div class="reserve-copy">
+          <p class="eyebrow">Reservations</p>
+          <h2>Send a reservation enquiry</h2>
+          <p>Tell us when you'd like to visit. This is an enquiry, not a confirmed booking: we reply by email or phone to confirm your table.</p>
+          <p class="note">In this demo the form checks your details but does not send them anywhere.</p>
+        </div>
+
+        <!-- To receive enquiries by email, create a free form at formspree.io and paste
+             its URL into data-endpoint, e.g. data-endpoint="https://formspree.io/f/abcdwxyz" -->
+        <form class="reserve-form" id="reserve-form" data-endpoint="" novalidate>
+          <div class="field">
+            <label for="r-name">Full name</label>
+            <input id="r-name" name="name" type="text" autocomplete="name" required>
+            <p class="error" id="r-name-error"></p>
+          </div>
+          <div class="field">
+            <label for="r-contact">Email or phone number</label>
+            <input id="r-contact" name="contact" type="text" autocomplete="email" required>
+            <p class="error" id="r-contact-error"></p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="r-date">Date</label>
+              <input id="r-date" name="date" type="date" required>
+              <p class="error" id="r-date-error"></p>
+            </div>
+            <div class="field">
+              <label for="r-time">Time</label>
+              <select id="r-time" name="time" required>
+                <option value="">Choose…</option>
+                <option value="12:00">12:00 pm</option>
+                <option value="13:00">1:00 pm</option>
+                <option value="14:00">2:00 pm</option>
+                <option value="18:00">6:00 pm</option>
+                <option value="19:00">7:00 pm</option>
+                <option value="20:00">8:00 pm</option>
+              </select>
+              <p class="error" id="r-time-error"></p>
+            </div>
+            <div class="field">
+              <label for="r-guests">Guests</label>
+              <input id="r-guests" name="guests" type="number" min="1" max="12" value="2" required>
+              <p class="error" id="r-guests-error"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="r-notes">Special requests <span class="optional">(optional)</span></label>
+            <textarea id="r-notes" name="notes" rows="3" placeholder="Allergies, high chair, birthday…"></textarea>
+          </div>
+          <button class="btn" type="submit">Send enquiry</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact / footer -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo logo-light" href="#home">Cipher<span>Eats</span></a>
+        <p>Grill &amp; Nigerian kitchen. A fictional restaurant created as a frontend portfolio demo.</p>
+      </div>
+      <div>
+        <h2>Opening hours</h2>
+        <dl class="hours">
+          <div><dt>Monday - Friday</dt><dd>8am - 9pm</dd></div>
+          <div><dt>Saturday - Sunday</dt><dd>8am - 11pm</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p>Sample location: Oshogbo, Osun State (demo only, not a real address)</p>
+        <p>Email: <span class="mono">hello@ciphereats.example</span> (demo)</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reserve">Reservations</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Cipher Eats demo.</p>
+      <p>Designed and built by <a href="https://www.linkedin.com/in/nabilat-salawudeen-77a7423a1/" target="_blank" rel="noopener">Nabilat Salawudeen</a></p>
+    </div>
+  </footer>
+</body>
+</html>
